@@ -61,3 +61,11 @@ CATEGORIES = {
     "коммуналка": "Bills",
     "other": "Other",
     "другое": "Other"}
+
+def get_current_month():
+    return datetime.now().strftime("%B")
+    
+def normalize_category(category):
+    category = category.lower().strip()
+    return CATEGORIES.get(category,"Other")
+
